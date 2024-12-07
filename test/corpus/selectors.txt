@@ -84,6 +84,7 @@ p:has(li.foo) {}
 p:has(.foo, .bar) {}
 a:not([href]) {}
 :host([a="b"]:hover) {}
+:host {}
 :nth-child(2n of a.external) {}
 ---
 
@@ -114,6 +115,9 @@ a:not([href]) {}
     (block))
   (rule_set
     (selectors (pseudo_class_selector (class_name) (arguments (pseudo_class_selector (attribute_selector (attribute_name) (string_value (string_content))) (class_name (identifier))))))
+    (block))
+  (rule_set
+    (selectors (pseudo_class_selector (class_name)))
     (block))
   (rule_set
     (selectors (pseudo_class_selector (class_name) (arguments (plain_value) (class_selector (tag_name) (class_name (identifier))))))
